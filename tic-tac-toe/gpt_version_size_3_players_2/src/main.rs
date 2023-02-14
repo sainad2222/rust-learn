@@ -9,14 +9,14 @@ enum Player {
 
 impl Player {
     fn symbol(&self) -> char {
-        match *self {
+        match self {
             Player::X => 'X',
             Player::O => 'O',
             Player::None => ' ',
         }
     }
     fn toggle(&self) -> Self {
-        match *self {
+        match self {
             Player::X => Player::O,
             Player::O => Player::X,
             _ => Player::None,
